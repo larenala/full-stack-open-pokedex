@@ -4,4 +4,9 @@ describe('Pokedex', function() {
     cy.contains('ivysaur')
     cy.contains('Pokémon and Pokémon character names are trademarks of Nintendo.')
   })
+  it('pokemon page can be opened', function() {
+    cy.visit('http://localhost:5001')
+    cy.contains('weedle')
+    cy.contains('special defense')
+  })
 })
