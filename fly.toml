@@ -6,6 +6,9 @@
 app = "hidden-voice-5026"
 primary_region = "arn"
 
+[env]
+  PORT = "3000" # add this
+
 
 [http_service]
   internal_port = 3000
