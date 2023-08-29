@@ -28,12 +28,9 @@ primary_region = "arn"
   [build.args]
     NODE_VERSION = "16.14.0"
 
-[[services.http_checks]]
-  interval = 10000
-  grace_period = "5s"
-  method = "get"
+[[http_service.checks]]
+  grace_period = "10s"
+  interval = "30s"
+  method = "GET"
+  timeout = "5s"
   path = "/health"
-  protocol = "http"
-  timeout = 2000
-  tls_skip_verify = false
-  [services.http_checks.headers]
